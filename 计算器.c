@@ -24,7 +24,7 @@ int main()
     char a;
     while (1)
     {
-        printf("输入你要计算的式子，例如：x+y，\n");
+        printf("输入要计算的式子，例如：x+y，\n");
         scanf("%f%c%f",&x,&a,&y);
         printf("%g\n",jsq(a,x,y));
     }
