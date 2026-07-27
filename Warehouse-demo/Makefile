@@ -1,6 +1,6 @@
 CC = gcc
 
-CFLAGS	= -Wall -wextra -I$(INC_DIR) -MMD
+CFLAGS	= -Wall -Wextra -I$(INC_DIR) -MMD
 LDFLAGS =
 RM		= rm -rf
 MKDIR	= mkdir -p 
@@ -13,7 +13,7 @@ BIN_DIR = bin
 
 SRCS 	= $(shell find $(SRC_DIR) -name "*.c")
 OBJS 	= $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
-DEPS 	= $(OBJS:.o = .d)
+DEPS 	= $(OBJS:.o=.d)
 TARGET 	= $(BIN_DIR)/main
 
 -include $(DEPS)
@@ -38,4 +38,4 @@ clean:
 
 rebuild: clean all
 
-.PHONY all run clear rebuild
+.PHONY: all run clear rebuild
