@@ -1,7 +1,8 @@
 #include "mune.h"
 // 生成菜单
 void printf_mune()
-{
+{   
+    printf("*-----------------------");
     printf("    仓库管理系统\n");
     printf("*---1.查询仓库\n");
     printf("*---2.物品出库\n");
@@ -13,6 +14,6 @@ void printf_mune()
     printf("*---8.物品信息更新\n");
     printf("*---9.系统统计与报表生成\n");
     printf("*---0.退出仓库管理系统\n");
-    printf("请输入你要操作的编号：\n");
+    printf("请输入你要操作的编号：");
 
 }

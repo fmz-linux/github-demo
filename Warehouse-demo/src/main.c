@@ -1,9 +1,10 @@
 #include "main.h"
 #include "mune.h"
-
+#include "ruku.h"
 int main()
 {
     int n;
+    Init_Head();
     while (1)
     {   
         printf_mune();
@@ -17,7 +18,7 @@ int main()
                 printf("物品出库");
                 break;
             case 3:
-                printf("物品入库");
+                ruku();       //入库
                 break;
             case 4:
                 printf("入库");
