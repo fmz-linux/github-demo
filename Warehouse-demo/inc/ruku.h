@@ -6,7 +6,6 @@
 #include<stdlib.h>
 #include <string.h> 
 #include<stdbool.h>
-
 //物品名称、类别、规格、数量和存放位置
 typedef struct Item
 {

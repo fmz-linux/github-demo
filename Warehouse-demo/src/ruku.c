@@ -1,4 +1,5 @@
 #include "ruku.h"
+#include "rukujilu.h"
 
 static int ids;
 Node *g_head;
@@ -6,7 +7,7 @@ Node *g_head;
 //初始头节点
 void Init_Head()
 {   
-     g_head = (Node *)malloc(sizeof(Node));
+    g_head = (Node *)malloc(sizeof(Node));
     if (g_head == NULL)
     {
         perror("头节点内存分配失败...");
@@ -39,7 +40,6 @@ Node* Creat_Node()
     scanf("%d",&(newNode->data.Qty));
     printf("请输入入库物品位置：");
     scanf("%31s",newNode->data.Loc);
-
     return newNode;
 }
 
@@ -63,6 +63,8 @@ void inertTail()
        tail->next = newNode;
        g_head->prev = newNode;
     }
+    rkJl_save(newNode);
+    printf("id为‘%d’商品入库成功\n",newNode->data.id);
 }
 
 //入库操作

@@ -1,9 +1,11 @@
 #include "main.h"
 #include "mune.h"
 #include "ruku.h"
+#include "rukujilu.h"
 int main()
 {
     int n;
+    rkJl_InitHead();
     Init_Head();
     while (1)
     {   
@@ -21,7 +23,7 @@ int main()
                 ruku();       //入库
                 break;
             case 4:
-                printf("入库");
+                rkJl_ShowALL();
                 break;
             case 5:
                 printf("入库");
