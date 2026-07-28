@@ -64,7 +64,7 @@ void inertTail()
        g_head->prev = newNode;
     }
     rkJl_save(newNode);
-    printf("id为‘%d’商品入库成功\n",newNode->data.id);
+    printf("id为‘%d’物品入库成功\n",newNode->data.id);
 }
 
 //入库操作
@@ -75,9 +75,8 @@ void ruku()
     {
         inertTail();
         printf("该入库物品id：%d\n",ids);
-        printf("如果需要继续入库请输入1，反之输入0：");
+        printf("如果需要继续入库请输入1，反之输入任意数字：");
         scanf("%d",&a);
     }
-    
 }
 
